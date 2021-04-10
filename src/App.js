@@ -34,7 +34,7 @@ import * as eventsData from './data/70s-war-events.json';
 // Comment out above because the code is not working -Try to fix it Zoheb
 function App() {
   const [viewport, setViewport] = useState({
-    width: '98vw',
+    width: '99vw',
     height: '98vh',
     latitude: 15,
     longitude: 0,
