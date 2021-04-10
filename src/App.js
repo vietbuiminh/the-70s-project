@@ -67,9 +67,11 @@ function App() {
       ))}
 
       {selectedEvent ? (
+        // this is for the pop up window 
         <Popup longitude={selectedEvent.coordinates[1]} latitude={selectedEvent.coordinates[0]}>
           <div>
-            event
+            <h2>{selectedEvent.name}</h2>
+            <h3>Period ({selectedEvent.start} - {selectedEvent.end})</h3>
           </div>
         </Popup>
       ) : null}
