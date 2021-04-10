@@ -30,14 +30,4 @@ const App = () => {
   return <div className="map-container" ref={mapContainerRef} />;
 };
 
-  return (
-    <ReactMapGL
-      {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-      onViewportChange={viewport => {setViewport(viewport)}}
-      mapStyle="mapbox://styles/vietbuiminh/cknb6oqro1jqj17o622t2j5su"
-    />
-  );
-}
-
 export default App;
