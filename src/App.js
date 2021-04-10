@@ -38,9 +38,10 @@ function App() {
     height: '98vh',
     latitude: 15,
     longitude: 0,
-    zoom: 1.5
+    zoom: 2,
+    pitch: 40
   });
-
+  const [selectedEvent, setSelectedEvent] = useState(null);
   return (
     <ReactMapGL
       {...viewport}
@@ -56,7 +57,10 @@ function App() {
           longitude={event.coordinates[1]}
           latitude={event.coordinates[0]}
         >
-          <button class="button-style">
+          <button className="button-style" onClick={(e) => {
+            e.preventDefault();
+            setSelectedEvent(event)
+          }}>
             <img src="conflict.png" alt="war conflict symbol"/>
           </button>
         </Marker>
