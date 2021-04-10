@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useRef } from 'react';
-import ReactMapGL, {Marker} from 'react-map-gl';
+import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
 // import mapboxgl from 'mapbox-gl';
 
@@ -57,14 +57,22 @@ function App() {
           longitude={event.coordinates[1]}
           latitude={event.coordinates[0]}
         >
-          <button className="button-style" onClick={(e) => {
+          <button className="button-style" onClick={e => {
             e.preventDefault();
-            setSelectedEvent(event)
+            setSelectedEvent(event);
           }}>
             <img src="conflict.png" alt="war conflict symbol"/>
           </button>
         </Marker>
       ))}
+
+      {selectedEvent ? (
+        <Popup longitude={selectedEvent.coordinates[1]} latitude={selectedEvent.coordinates[0]}>
+          <div>
+            event
+          </div>
+        </Popup>
+      ) : null}
     </ReactMapGL>
   );
 }
