@@ -56,7 +56,9 @@ function App() {
           longitude={event.coordinates[1]}
           latitude={event.coordinates[0]}
         >
-          <div>EVENT</div>
+          <button class="button-style">
+            <img src="conflict.png" alt="war conflict symbol"/>
+          </button>
         </Marker>
       ))}
     </ReactMapGL>
