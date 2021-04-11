@@ -14,7 +14,7 @@ function App() {
   const [selectedEvent, setSelectedEvent] = useState(null);
   
   return (
-    <ReactMapGL
+    <ReactMapGL className="map-container"
       {...viewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={viewport => {setViewport(viewport)}}
@@ -66,6 +66,7 @@ function App() {
           <div className="box-container"> 
             <h2 className="event-title">💥{selectedEvent.name}</h2>
             <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
+            <p>{selectedEvent.info}</p>
           </div>
         </Popup>
       ) : null}

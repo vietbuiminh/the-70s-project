@@ -1,5 +1,4 @@
 .container {
-  display: grid;
   background-color: #335771;
   align-content: center;
   font-family: 'Roboto', sans-serif;
@@ -13,6 +12,9 @@ code {
     monospace;
 }
 
+.map-container {
+  background-size: cover;
+}
 .button-style {
   background: none;
   border:none;
@@ -24,18 +26,20 @@ code {
 }
 
 .event-title {
-  font-size: 18px;
-  margin-top: 0;
+  font-size: 30px;
+  margin-bottom: 0.5em;
 }
 
 .period-title {
-  font-size: 15px;
-  font-weight: normal;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  color:#335771;
   margin: 0;
 }
 
 .popup-box {
-  width: 200px;
+  width: 400px;
   background-color: #203747;
   border-radius: 5px;
 }
@@ -44,3 +48,13 @@ code {
   color: black;
 }
 
+.mapboxgl-popup-close-button{
+  font-size: 30px;
+  font-weight: bold;
+  color:#8b1d1d;
+}
+
+.mapboxgl-popup-content {
+  border: 4px dashed;
+  border-color:#203747;
+}
