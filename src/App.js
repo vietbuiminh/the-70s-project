@@ -1,3 +1,5 @@
+// Project by Viet Bui and Zoheb Khan
+
 import { useState } from 'react';
 import ReactMapGL, { Marker, Popup , FlyToInterpolator } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
@@ -6,6 +8,7 @@ function removeSpace(s) {
   let newStr = s.split(" ").join("-");
   return newStr;
 }
+
 function App() {
   const [viewport, setViewport] = useState({
     width: '99vw',
@@ -15,6 +18,7 @@ function App() {
     zoom: 2,
     pitch: 40
   });
+
   const [selectedEvent, setSelectedEvent] = useState(null);
   
   return (
@@ -79,7 +83,6 @@ function App() {
         </Popup>
       ) : null}
     </ReactMapGL>
-    
   );
 }
 
