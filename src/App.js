@@ -2,6 +2,10 @@ import { useState } from 'react';
 import ReactMapGL, { Marker, Popup , FlyToInterpolator } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
 
+function removeSpace(s) {
+  let newStr = s.split(" ").join("-");
+  return newStr;
+}
 function App() {
   const [viewport, setViewport] = useState({
     width: '99vw',
@@ -35,8 +39,8 @@ function App() {
               ...viewport,
               longitude: event.coordinates[1],
               latitude: event.coordinates[0],
-              zoom: 5,
-              transitionDuration: 500,
+              zoom: 6,
+              transitionDuration: 1000,
               transitionInterpolator: new FlyToInterpolator(),
             });
           }}>
@@ -56,7 +60,7 @@ function App() {
           onClose={() => {
             setViewport({
               ...viewport,
-              zoom: 2,
+              zoom: 3,
               transitionDuration: 500,
               transitionInterpolator: new FlyToInterpolator(),
             });
@@ -67,7 +71,9 @@ function App() {
             <h2 className="event-title">💥{selectedEvent.name}</h2>
             <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
             <p>{selectedEvent.info}</p>
-            <img className="img-style" src={selectedEvent.img} alt="Image of the event" />
+            <a href={"http://en.wikipedia.org/w/index.php?title=Special:Search&search="+removeSpace(selectedEvent.name)} >
+            <img className="img-style" src={selectedEvent.img} alt={"the event of "+selectedEvent.name}/>
+            </a>
           </div>
         </Popup>
       ) : null}

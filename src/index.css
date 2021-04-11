@@ -60,5 +60,8 @@ code {
 }
 
 .img-style {
-  size:relative;
+  width: 350px;
+  border-radius: 5px;
+  
+  text-align: center;
 }
