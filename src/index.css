@@ -70,3 +70,25 @@ code {
   font-weight: lighter;
   margin: 0;
 }
+.project-name{
+  font-size: 50px;
+  color:#203747;
+  text-shadow: 10px;
+  position:absolute;
+  padding: 30px;
+  margin: 0 0;
+  bottom: 50px;
+  opacity: 0.8;
+}
+
+.project-source a {
+  color: white;
+}
+.project-source{
+  color: white;
+  position:absolute;
+  margin: 0 0;
+  bottom: 40px;
+  left: 40px;
+  opacity: 0.5;
+}
