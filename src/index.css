@@ -22,3 +22,8 @@ code {
   width: 35px;
   height: 25px;
 }
+
+.event-title {
+  font-family: serif;
+  font-size: 18px;
+}

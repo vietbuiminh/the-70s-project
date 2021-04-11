@@ -1,5 +1,6 @@
-import './App.css';
-import { useState, useRef } from 'react';
+
+// import { useState, useRef } from 'react';
+import { useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
 // import mapboxgl from 'mapbox-gl';
@@ -65,18 +66,27 @@ function App() {
           </button>
         </Marker>
       ))}
-
+      
       {selectedEvent ? (
         // this is for the pop up window 
-        <Popup longitude={selectedEvent.coordinates[1]} latitude={selectedEvent.coordinates[0]}>
-          <div>
-            <h2>{selectedEvent.name}</h2>
-            <h3>Period ({selectedEvent.start} - {selectedEvent.end})</h3>
+        // need to make a function to search for the summary of the wikipedia
+        
+        <Popup 
+          longitude={selectedEvent.coordinates[1]} 
+          latitude={selectedEvent.coordinates[0]}
+          onClose={() => {
+            setSelectedEvent(null)
+          }}
+        >
+          <div> 
+            <h2 className="event-title">{selectedEvent.name}</h2>
+            <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
           </div>
         </Popup>
       ) : null}
     </ReactMapGL>
   );
 }
+
 
 export default App;
