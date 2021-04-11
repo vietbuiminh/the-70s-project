@@ -1,12 +1,6 @@
-
-
 import { useState } from 'react';
 import ReactMapGL, { Marker, Popup , FlyToInterpolator } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
-
-
-
-
 
 function App() {
   const [viewport, setViewport] = useState({
