@@ -1,9 +1,11 @@
-body {
+.container {
+  display: grid;
   background-color: #335771;
   align-content: center;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -23,24 +25,22 @@ code {
 
 .event-title {
   font-size: 18px;
+  margin-top: 0;
 }
 
 .period-title {
   font-size: 15px;
   font-weight: normal;
+  margin: 0;
 }
 
 .popup-box {
   width: 200px;
   background-color: #203747;
-  opacity: 0.9;
   border-radius: 5px;
-  
 }
 .box-container {
   display: grid;
-  
+  color: black;
 }
-.mapboxgl-popup-content {
-  background: black;
-}
+

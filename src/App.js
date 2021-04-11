@@ -1,7 +1,7 @@
 
 // import { useState, useRef } from 'react';
 import { useState } from 'react';
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup , FlyToInterpolator } from 'react-map-gl';
 import * as eventsData from './data/70s-war-events.json';
 // import mapboxgl from 'mapbox-gl';
 
@@ -43,6 +43,7 @@ function App() {
     pitch: 40
   });
   const [selectedEvent, setSelectedEvent] = useState(null);
+  
   return (
     <ReactMapGL
       {...viewport}
@@ -61,6 +62,14 @@ function App() {
           <button className="button-style" onClick={e => {
             e.preventDefault();
             setSelectedEvent(event);
+            setViewport({
+              ...viewport,
+              longitude: event.coordinates[1],
+              latitude: event.coordinates[0],
+              zoom: 5,
+              transitionDuration: 500,
+              transitionInterpolator: new FlyToInterpolator(),
+            });
           }}>
             <img src="conflict.png" alt="war conflict symbol"/>
           </button>
@@ -74,17 +83,25 @@ function App() {
         <Popup className="popup-box"
           longitude={selectedEvent.coordinates[1]} 
           latitude={selectedEvent.coordinates[0]}
+         
           onClose={() => {
+            setViewport({
+              ...viewport,
+              zoom: 2,
+              transitionDuration: 500,
+              transitionInterpolator: new FlyToInterpolator(),
+            });
             setSelectedEvent(null)
           }}
         >
-          <div className="box-style"> 
+          <div className="box-container"> 
             <h2 className="event-title">💥{selectedEvent.name}</h2>
             <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
           </div>
         </Popup>
       ) : null}
     </ReactMapGL>
+    
   );
 }
 
