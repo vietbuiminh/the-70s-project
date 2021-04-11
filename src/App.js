@@ -67,6 +67,7 @@ function App() {
             <h2 className="event-title">💥{selectedEvent.name}</h2>
             <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
             <p>{selectedEvent.info}</p>
+            <img className="img-style" src={selectedEvent.img} alt="Image of the event" />
           </div>
         </Popup>
       ) : null}

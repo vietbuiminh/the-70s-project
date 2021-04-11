@@ -58,3 +58,7 @@ code {
   border: 4px dashed;
   border-color:#203747;
 }
+
+.img-style {
+  size:relative;
+}
