@@ -74,6 +74,7 @@ function App() {
             <a href={"http://en.wikipedia.org/w/index.php?title=Special:Search&search="+removeSpace(selectedEvent.name)} >
             <img className="img-style" src={selectedEvent.img} alt={"the event of "+selectedEvent.name}/>
             </a>
+            <p className="note">*click and hold on the pictures for 2 seconds to learn more</p>
           </div>
         </Popup>
       ) : null}

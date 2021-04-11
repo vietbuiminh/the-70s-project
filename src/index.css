@@ -65,3 +65,8 @@ code {
   
   text-align: center;
 }
+.note {
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 0;
+}
