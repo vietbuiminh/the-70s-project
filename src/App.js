@@ -27,7 +27,7 @@ function App() {
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={viewport => {setViewport(viewport)}}
       // Changed the map to the cold war theme map
-      // mapStyle="mapbox://styles/vietbuiminh/cknb5qncl12ap17lp7dfwujyo"
+      mapStyle="mapbox://styles/vietbuiminh/cknb5qncl12ap17lp7dfwujyo"
     >
       {eventsData.years.map((event) => (
         // Marker getting data from JSON file in data folder
