@@ -53,7 +53,7 @@ function App() {
     >
       {eventsData.years.map((event) => (
         // Marker getting data from JSON file in data folder
-        <Marker 
+        <Marker
           key={event.id} 
           longitude={event.coordinates[1]}
           latitude={event.coordinates[0]}
@@ -71,15 +71,15 @@ function App() {
         // this is for the pop up window 
         // need to make a function to search for the summary of the wikipedia
         
-        <Popup 
+        <Popup className="popup-box"
           longitude={selectedEvent.coordinates[1]} 
           latitude={selectedEvent.coordinates[0]}
           onClose={() => {
             setSelectedEvent(null)
           }}
         >
-          <div> 
-            <h2 className="event-title">{selectedEvent.name}</h2>
+          <div className="box-style"> 
+            <h2 className="event-title">💥{selectedEvent.name}</h2>
             <h3 className="period-title">Period ({selectedEvent.start} - {selectedEvent.end})</h3>
           </div>
         </Popup>
