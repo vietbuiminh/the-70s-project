@@ -18,4 +18,4 @@ It was an amazing experience by far. MLH hackathons are very intriguing for thei
 ## What's next for The 70s
 We are looking forward to bring information about the wars that happened in the past and adding some cool features to it.
 
-[Check out the video demo](https://drive.google.com/file/d/1RKR9RuuixWMA1tnDDqcgYda_nVJRSqLh/view?usp=sharing)
+[Check out the video demo](https://www.youtube.com/watch?v=2sPgiIH0ATg&t=3s)
