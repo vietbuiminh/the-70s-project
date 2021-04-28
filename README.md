@@ -1,6 +1,6 @@
 # The 70s - The Decade of Turmoil
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link to our website[Website](https://the70s.netlify.app/).
 
 ## Inspiration
 The inspiration was from Wikipedia and Mapbox. We want to see it fusing and turn out with a beautiful website.
