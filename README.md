@@ -1,6 +1,6 @@
 # The 70s - The Decade of Turmoil
 
-Link to our https://the70s.netlify.app/
+https://the70s.netlify.app/
 
 ## Inspiration
 The inspiration was from Wikipedia and Mapbox. We want to see it fusing and turn out with a beautiful website.
